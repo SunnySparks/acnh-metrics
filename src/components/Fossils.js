@@ -1,17 +1,17 @@
 import '../App.css';
 
-const Villager = () => {
-  const villagers = [];
+const Fossil = () => {
+  const fossils = [];
   return (
     <div>
       <div>
         <div>
-          Villagers:
-          {villagers}
+          Fossils::
+          {fossils}
         </div>
       </div>
     </div>
   );
 };
 
-export default Villager;
+export default Fossil;
