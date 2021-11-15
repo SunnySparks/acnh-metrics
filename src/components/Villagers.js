@@ -2,6 +2,7 @@ import '../App.css';
 import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import VillagerList from './VillagerList';
 import { getVillagers } from '../redux/villagers/villagers';
 
 const Villager = () => {
@@ -21,23 +22,24 @@ const Villager = () => {
   villagerName.length = 24;
   console.log(villagers);
 
-  villagers.map((villager) => (
-    console.log(villager.name['name-USen'])
-    /* Object.entries(villager.name).map((name) => (
-      console.log(name)
-    )) */
-  ));
-
   return (
     <div>
       <div>
         <div>
           { villagers !== 0
             ? villagers.map((villager) => (
-              villager.name['name-USen']
+              <VillagerList
+                key={villager.id}
+                name={villager.name['name-USen']}
+                id={villager.id}
+                bday={villager['birthday-string']}
+                /* eslint-disable dot-notation */
+                icon={villager['icon_uri']}
+                /* eslint-enable dot-notation */
+              />
             ))
             : (
-              'villagers'
+              'Loading Villagers'
             )}
           <button type="button">
             <NavLink
