@@ -36,6 +36,7 @@ const Villager = () => {
                 /* eslint-disable dot-notation */
                 icon={villager['icon_uri']}
                 /* eslint-enable dot-notation */
+                species={villager.species}
               />
             ))
             : (

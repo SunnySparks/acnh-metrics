@@ -9,15 +9,25 @@ const VillagerList = (props) => {
   // const dispatch = useDispatch();
 
   const {
-    name, id, bday, icon,
+    name, id, bday, icon, species,
   } = props;
 
   return (
     <div>
       <h1>{name}</h1>
       <img src={icon} alt="user" className="rocketImage" />
-      <h4>{id}</h4>
-      <h4>{bday}</h4>
+      <h4>
+        villager ID:
+        {id}
+      </h4>
+      <h4>
+        Birthday:
+        {bday}
+      </h4>
+      <h4>
+        Species:
+        {species}
+      </h4>
     </div>
   );
 };
@@ -29,4 +39,5 @@ VillagerList.propTypes = {
   id: PropTypes.string.isRequired,
   bday: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
+  species: PropTypes.string.isRequired,
 };
