@@ -2,7 +2,6 @@ import {
   BrowserRouter as Router, Routes,
 } from 'react-router-dom';
 import { Route } from 'react-router';
-// import Navbar from './Navbar';
 import Home from './Home';
 import Villagers from './Villagers';
 import Fossils from './Fossils';
