@@ -4,14 +4,20 @@ import '../App.css';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-// import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getOneVillager } from '../redux/villagers/villagers';
 
 const VillagerList = (props) => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const {
     name, id, bday, icon, species, value,
   } = props;
+
+  dispatch(getOneVillager(id));
+  const villager = useSelector((state) => state.villagersReducer);
+  console.log(villager);
+
   if (value === 'value') {
     return (
       <div className="container p-4">
