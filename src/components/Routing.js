@@ -4,14 +4,16 @@ import {
   BrowserRouter as Router, Routes,
 } from 'react-router-dom';
 import { Route } from 'react-router';
+import Home from './Home';
 import Villagers from './Villagers';
-import VillagerList from './VillagerList';
+import Fossil from './Fossils';
 
 const Routing = () => (
   <Router>
     <Routes>
-      <Route exact path="/" element={<Villagers />} />
-      <Route exact path="/villagerList" element={<VillagerList />} />
+      <Route exact path="/" element={<Home />} />
+      <Route path="/villagers" element={<Villagers />} />
+      <Route path="/fossils" element={<Fossil />} />
     </Routes>
   </Router>
 );

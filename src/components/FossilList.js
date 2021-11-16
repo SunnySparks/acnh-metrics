@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 // import { useDispatch } from 'react-redux';
 
-const VillagerList = (props) => {
+const FossilList = (props) => {
   // const dispatch = useDispatch();
 
   const {
-    name, id, bday, icon, species, value,
+    name, id, phrase, image, value,
   } = props;
   if (value === 'value') {
     return (
@@ -33,18 +33,14 @@ const VillagerList = (props) => {
           {name}
         </Link>
       </h1>
-      <img src={icon} alt="user" className="rocketImage" />
+      <img src={image} alt="user" className="rocketImage" />
       <h4>
         villager ID:
         {id}
       </h4>
       <h4>
-        Birthday:
-        {bday}
-      </h4>
-      <h4>
-        Species:
-        {species}
+        About:
+        {phrase}
       </h4>
       <h4>
         Value:
@@ -54,13 +50,12 @@ const VillagerList = (props) => {
   );
 };
 
-export default VillagerList;
+export default FossilList;
 
-VillagerList.propTypes = {
+FossilList.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  bday: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  species: PropTypes.string.isRequired,
+  phrase: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
 };

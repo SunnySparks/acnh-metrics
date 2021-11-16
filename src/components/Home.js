@@ -15,14 +15,6 @@ const Home = () => (
               </span>
               <span className="title-nav">title nav</span>
             </div>
-            <div>
-              <NavLink
-                className="nav-link"
-                to="/"
-              >
-                <h2 className="links-nav">Home</h2>
-              </NavLink>
-            </div>
             <div className="mb-1">|</div>
             <div>
               <NavLink

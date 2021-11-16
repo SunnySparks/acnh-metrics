@@ -1,0 +1,67 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import '../App.css';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import FossilList from './FossilList';
+import { getFossils } from '../redux/fossils/fossils';
+
+const Fossil = () => {
+  const fossilsArr = [];
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (fossilsArr.length === 0) {
+      dispatch(getFossils());
+    }
+  }, []);
+
+  const fossilsList = useSelector((state) => state.fossilsReducer);
+  const fossils = fossilsList;
+  fossils.length = 24;
+  console.log(fossilsList);
+
+  return (
+    <div>
+      <div>
+        <div>
+          <button type="button">
+            <Link
+              className="nav-link"
+              to="/"
+            >
+              <h2 className="links-nav">go back</h2>
+            </Link>
+          </button>
+          { fossils.length !== 0
+            ? fossils.map((fossil) => (
+              <FossilList
+                key={fossil.id}
+                /* eslint-disable dot-notation */
+                name={fossil['file-name']}
+                id={fossil.id}
+                phrase={fossil['museum-phrase']}
+                image={fossil['image_uri']}
+                value={fossil['part-of']}
+                /* eslint-enable dot-notation */
+              />
+            ))
+            : (
+              <FossilList
+                key="key"
+                name="name"
+                id="id"
+                phrase="bday"
+                image="icon"
+                value="value"
+              />
+            )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Fossil;

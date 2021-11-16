@@ -1,11 +1,11 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../App.css';
-// import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import VillagerList from './VillagerList';
-// import SpeciesList from './SpeciesList';
 import { getVillagers } from '../redux/villagers/villagers';
-// import SpeciesList from './SpeciesList';
 
 const Villager = () => {
   const villagersArr = [];
@@ -26,6 +26,14 @@ const Villager = () => {
     <div>
       <div>
         <div>
+          <button type="button">
+            <Link
+              className="nav-link"
+              to="/"
+            >
+              <h2 className="links-nav">go back</h2>
+            </Link>
+          </button>
           { villagers.length !== 0
             ? villagers.map((villager) => (
               <VillagerList
