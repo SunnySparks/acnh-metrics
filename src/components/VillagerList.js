@@ -11,7 +11,20 @@ const VillagerList = (props) => {
   const {
     name, id, bday, icon, species, value,
   } = props;
-
+  if (value === 'value') {
+    return (
+      <div className="container p-4">
+        <div className="row">
+          <div className="col-sm-4" />
+          <div className="col-sm-8">
+            <h2>
+              Loading
+            </h2>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div>
       <h1>{name}</h1>
