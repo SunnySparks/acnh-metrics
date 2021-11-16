@@ -9,7 +9,7 @@ const VillagerList = (props) => {
   // const dispatch = useDispatch();
 
   const {
-    name, id, bday, icon, species,
+    name, id, bday, icon, species, value,
   } = props;
 
   return (
@@ -28,6 +28,10 @@ const VillagerList = (props) => {
         Species:
         {species}
       </h4>
+      <h4>
+        Value:
+        {value}
+      </h4>
     </div>
   );
 };
@@ -40,4 +44,5 @@ VillagerList.propTypes = {
   bday: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   species: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
 };

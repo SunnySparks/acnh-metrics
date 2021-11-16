@@ -1,19 +1,17 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import {
   BrowserRouter as Router, Routes,
 } from 'react-router-dom';
 import { Route } from 'react-router';
-import Home from './Home';
 import Villagers from './Villagers';
-import Fossils from './Fossils';
-import Items from './Items';
+import VillagerList from './VillagerList';
 
 const Routing = () => (
   <Router>
     <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route path="/villagers" element={<Villagers />} />
-      <Route path="/fossils" element={<Fossils />} />
-      <Route path="/items" element={<Items />} />
+      <Route exact path="/" element={<Villagers />} />
+      <Route exact path="/villagerList" element={<VillagerList />} />
     </Routes>
   </Router>
 );

@@ -1,11 +1,11 @@
 import '../App.css';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import VillagerList from './VillagerList';
+import VillagerList from './VillagerList';
 // import SpeciesList from './SpeciesList';
 import { getVillagers } from '../redux/villagers/villagers';
-import SpeciesList from './SpeciesList';
+// import SpeciesList from './SpeciesList';
 
 const Villager = () => {
   const villagersArr = [];
@@ -44,6 +44,14 @@ const Villager = () => {
   const equir = [];
   const tigers = [];
   const wolves = [];
+  const species = [
+    'Anteaters', 'Alligators', 'Bears', 'Birds',
+    'Bulls', 'Cats', 'Cubs', 'Chickens',
+    'Cows', 'Deer', 'Dogs', 'Ducks', 'Eagles', 'Elephants',
+    'Frogs', 'Goats', 'Gorillas', 'Hamsters', 'Hippos',
+    'Horses', 'Kangaroos', 'Koalas', 'Lions', 'Monkeys', 'Mice', 'Octopuses',
+    'Ostriches', 'Penguins', 'Pigs', 'Rabbits', 'Rhinos', 'Sheep',
+    'Squirrels', 'Tigers', 'Wolves'];
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -54,7 +62,7 @@ const Villager = () => {
 
   const villagersList = useSelector((state) => state.villagersReducer);
   const villagers = villagersList;
-  // const villagerName = [];
+  console.log(villagers);
 
   villagers.map((villager) => {
     switch (villager.species) {
@@ -171,17 +179,142 @@ const Villager = () => {
     /* eslint-enable consistent-return */
   });
 
-  antEaters.map((villager) => {
-    console.log(villager);
-    return villager;
+  const animalRender = (type) => {
+    type.map((villager) => (
+      <VillagerList
+        key={villager.id}
+        name={villager.name['name-USen']}
+        id={villager.id}
+        bday={villager['birthday-string']}
+        /* eslint-disable dot-notation */
+        icon={villager['icon_uri']}
+        /* eslint-enable dot-notation */
+        species={villager.species}
+      />
+    ));
+  };
+  species.map((type) => {
+    switch (type) {
+      case 'Anteaters':
+        animalRender(antEaters);
+        break;
+      case 'Bears':
+        animalRender(bears);
+        break;
+      case 'Birds':
+        animalRender(birds);
+        break;
+      case 'Bulls':
+        animalRender(bulls);
+        break;
+      case 'Cats':
+        animalRender(cats);
+        break;
+      case 'Cubs':
+        animalRender(cubs);
+        break;
+      case 'Chickens':
+        animalRender(chickens);
+        break;
+      case 'Cows':
+        animalRender(cows);
+        break;
+      case 'Alligators':
+        animalRender(alligators);
+        break;
+      case 'Deer':
+        animalRender(deer);
+        break;
+      case 'Dogs':
+        animalRender(dogs);
+        break;
+      case 'Ducks':
+        animalRender(ducks);
+        break;
+      case 'Elephants':
+        animalRender(elephants);
+        break;
+      case 'Frogs':
+        animalRender(frogs);
+        break;
+      case 'Goats':
+        animalRender(goats);
+        break;
+      case 'Gorillas':
+        animalRender(gorillas);
+        break;
+      case 'Hamsters':
+        animalRender(hamsters);
+        break;
+      case 'Hippos':
+        animalRender(hippos);
+        break;
+      case 'Horses':
+        animalRender(horses);
+        break;
+      case 'Koalas':
+        animalRender(koalas);
+        break;
+      case 'Kangaroos':
+        animalRender(kangaroos);
+        break;
+      case 'Lions':
+        animalRender(lions);
+        break;
+      case 'Monkeys':
+        animalRender(monkeys);
+        break;
+      case 'Mice':
+        animalRender(mice);
+        break;
+      case 'Octopuses':
+        animalRender(octopi);
+        break;
+      case 'Ostriches':
+        animalRender(ostriches);
+        break;
+      case 'Eagle':
+        animalRender(eagles);
+        break;
+      case 'Penguins':
+        animalRender(penguins);
+        break;
+      case 'Pigs':
+        animalRender(pigs);
+        break;
+      case 'Rabbits':
+        animalRender(rabbits);
+        break;
+      case 'Rhinos':
+        animalRender(rhinos);
+        break;
+      case 'Sheep':
+        animalRender(sheep);
+        break;
+      case 'Squirrels':
+        animalRender(equir);
+        break;
+      case 'Tigers':
+        animalRender(tigers);
+        break;
+      case 'Wolves':
+        animalRender(wolves);
+        break;
+      default:
+        return;
+    }
+    /* eslint-disable consistent-return */
+    return type;
+    /* eslint-enable consistent-return */
   });
+  console.log(villagers);
   return (
     <div>
       <div>
         <div>
           { villagers !== 0
-            ? dogs.map((villager) => (
-              <SpeciesList
+            ? villagers.map((villager) => (
+              <VillagerList
                 key={villager.id}
                 name={villager.name['name-USen']}
                 id={villager.id}
@@ -194,14 +327,6 @@ const Villager = () => {
             : (
               'Loading Villagers'
             )}
-          <button type="button">
-            <NavLink
-              className="nav-link"
-              to="/"
-            >
-              <h2 className="links-nav">go back</h2>
-            </NavLink>
-          </button>
         </div>
       </div>
     </div>
