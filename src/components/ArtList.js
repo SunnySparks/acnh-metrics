@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 // import { useDispatch } from 'react-redux';
 
-const FossilList = (props) => {
+const ArtList = (props) => {
   // const dispatch = useDispatch();
 
   const {
-    name, id, phrase, image, value,
+    name, id, desc, image, value,
   } = props;
   if (value === 'value') {
     return (
@@ -35,12 +35,12 @@ const FossilList = (props) => {
       </h1>
       <img src={image} alt="user" className="rocketImage" />
       <h4>
-        Fossil Name:
-        {id}
+        Painting Name:
+        {name}
       </h4>
       <h4>
-        About:
-        {phrase}
+        Description:
+        {desc}
       </h4>
       <h4>
         Value:
@@ -50,12 +50,12 @@ const FossilList = (props) => {
   );
 };
 
-export default FossilList;
+export default ArtList;
 
-FossilList.propTypes = {
+ArtList.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  phrase: PropTypes.string.isRequired,
+  desc: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
 };

@@ -4,24 +4,24 @@ import '../App.css';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import FossilList from './FossilList';
-import { getFossils } from '../redux/fossils/fossils';
+import ArtList from './ArtList';
+import { getArts } from '../redux/art/art';
 
-const Fossil = () => {
-  const fossilsArr = [];
+const Art = () => {
+  const artsArr = [];
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (fossilsArr.length === 0) {
-      dispatch(getFossils());
+    if (artsArr.length === 0) {
+      dispatch(getArts());
     }
   }, []);
 
-  const fossilsList = useSelector((state) => state.fossilsReducer);
-  const fossils = fossilsList;
-  fossils.length = 24;
-  console.log(fossilsList);
+  const artsList = useSelector((state) => state.artsReducer);
+  const arts = artsList;
+  arts.length = 24;
+  console.log(arts);
 
   return (
     <div>
@@ -35,21 +35,21 @@ const Fossil = () => {
               <h2 className="links-nav">go back</h2>
             </Link>
           </button>
-          { fossils.length !== 0
-            ? fossils.map((fossil) => (
-              <FossilList
-                key={fossil.id}
+          { arts.length !== 0
+            ? arts.map((art) => (
+              <ArtList
+                key={art.id}
                 /* eslint-disable dot-notation */
-                name={fossil.name['name-USen']}
-                id={fossil['file-name']}
-                phrase={fossil['museum-phrase']}
-                image={fossil['image_uri']}
-                value={fossil['part-of']}
+                name={art.name['name-USen']}
+                id={art.id}
+                desc={art['museum-desc']}
+                image={art['image_uri']}
+                value={art['file-name']}
                 /* eslint-enable dot-notation */
               />
             ))
             : (
-              <FossilList
+              <ArtList
                 key="key"
                 name="name"
                 id="id"
@@ -64,4 +64,4 @@ const Fossil = () => {
   );
 };
 
-export default Fossil;
+export default Art;

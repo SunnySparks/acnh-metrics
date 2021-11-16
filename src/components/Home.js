@@ -37,9 +37,9 @@ const Home = () => (
             <div>
               <NavLink
                 className="nav-link"
-                to="/items"
+                to="/art"
               >
-                <h2 className="links-nav">Items</h2>
+                <h2 className="links-nav">Art</h2>
               </NavLink>
             </div>
           </div>
