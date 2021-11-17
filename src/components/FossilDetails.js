@@ -43,14 +43,13 @@ const FossilDetails = () => {
         </Link>
       </button>
       <h1>
-        Name:
         {fossil.name['name-USen']}
       </h1>
       { /* eslint-disable dot-notation */
         <img src={fossil['image_uri']} alt="villager" className="villagerPic" />
       /* eslint-enable dot-notation */ }
       <h4>
-        Price:
+        Price: $
         {fossil.price}
       </h4>
     </div>

@@ -12,7 +12,7 @@ const FossilList = (props) => {
   const {
     name, id, price, image, idNum,
   } = props;
-  if (price === undefined) {
+  if (name === undefined) {
     return (
       <div className="container p-4">
         <div className="row">
@@ -34,10 +34,6 @@ const FossilList = (props) => {
         </Link>
       </h1>
       <img src={image} alt="user" className="rocketImage" />
-      <h4>
-        Fossil Name:
-        {id}
-      </h4>
       <h4>
         ID:
         {idNum}

@@ -23,6 +23,20 @@ const Fossil = () => {
   fossils.length = 24;
   console.log(fossilsList);
 
+  if (fossils[0] === undefined) {
+    return (
+      <div className="container p-4">
+        <div className="row">
+          <div className="col-sm-4" />
+          <div className="col-sm-8">
+            <h1>
+              Loading
+            </h1>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div>
       <div>
