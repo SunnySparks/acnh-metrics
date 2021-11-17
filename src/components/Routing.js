@@ -9,6 +9,7 @@ import Villagers from './Villagers';
 import Fossil from './Fossils';
 import Art from './Art';
 import VillagerDetails from './VillagerDetails';
+import FossilDetails from './FossilDetails';
 
 const Routing = () => (
   <Router>
@@ -17,6 +18,7 @@ const Routing = () => (
       <Route path="/villagers" element={<Villagers />} />
       <Route path="/villagers/:id" element={<VillagerDetails />} />
       <Route path="/fossils" element={<Fossil />} />
+      <Route path="/fossils/:name" element={<FossilDetails />} />
       <Route path="/art" element={<Art />} />
     </Routes>
   </Router>

@@ -18,7 +18,7 @@ export const getFossils = () => async (dispatch) => {
 };
 
 export const getOneFossil = (fossilName) => async (dispatch) => {
-  await axios.get(`https://acnhapi.com/v1a/villagers/${fossilName}`, {
+  await axios.get(`https://acnhapi.com/v1a/fossils/${fossilName}`, {
     method: 'GET',
   })
     .then((response) => {
@@ -33,7 +33,6 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_FOSSILS:
       /* eslint-disable no-unused-vars */
-      console.log(action.payload.data);
       return action.payload.data.sort((a, b) => 0.5 - Math.random());
       /* eslint-enable no-unused-vars */
     case GET_A_FOSSIL:
