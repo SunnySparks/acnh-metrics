@@ -3,13 +3,37 @@ import villagersReducer from '../redux/villagers/villagers';
 const prevState = [];
 
 const getVillagers = () => {
-  const data =
+  const data = [
       {
         "birthday": "2/8",
         "id": 71,
         "name": "Vladimir",
         "species": "Cub",
-      };
+      },
+      {
+        "birthday": "24/4",
+        "id": 234,
+        "name": "Walt",
+        "species": "Kangaroo",
+      },
+      {
+        "birthday": "21/11",
+        "id": 249,
+        "name": "Flip",
+        "species": "Monkey",
+      },
+      {
+        "birthday": "9/11",
+        "id": 3,
+        "name": "Pango",
+        "species": "Monkey",
+      },
+      {
+        "birthday": "20/2",
+        "id": 301,
+        "name": "Sprinke",
+        "species": "Penguin",
+      }];
     return prevState.push(data);
 };
 
@@ -19,12 +43,36 @@ describe('Mock villager data pull', () => {
   });
   test('It will fetch the data of the villagers', () => {
     expect(villagersReducer(prevState, getVillagers())).toEqual(
-        [{
+        [[      {
           "birthday": "2/8",
           "id": 71,
           "name": "Vladimir",
           "species": "Cub",
-        }],
+        },
+        {
+          "birthday": "24/4",
+          "id": 234,
+          "name": "Walt",
+          "species": "Kangaroo",
+        },
+        {
+          "birthday": "21/11",
+          "id": 249,
+          "name": "Flip",
+          "species": "Monkey",
+        },
+        {
+          "birthday": "9/11",
+          "id": 3,
+          "name": "Pango",
+          "species": "Monkey",
+        },
+        {
+          "birthday": "20/2",
+          "id": 301,
+          "name": "Sprinke",
+          "species": "Penguin",
+        }]],
     )
   })
 })
