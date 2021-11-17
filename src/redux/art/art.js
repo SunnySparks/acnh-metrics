@@ -33,7 +33,6 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ARTS:
       /* eslint-disable no-unused-vars */
-      console.log(action.payload.data);
       return action.payload.data.sort((a, b) => 0.5 - Math.random());
       /* eslint-enable no-unused-vars */
     case GET_ART:

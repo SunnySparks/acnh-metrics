@@ -8,11 +8,10 @@ import { Link } from 'react-router-dom';
 
 const ArtList = (props) => {
   // const dispatch = useDispatch();
-
   const {
     name, id, image, buyPrice, sellPrice,
   } = props;
-  if (name === 'name') {
+  if (name === undefined) {
     return (
       <div className="container p-4">
         <div className="row">

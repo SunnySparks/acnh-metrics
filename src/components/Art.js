@@ -20,7 +20,21 @@ const Art = () => {
 
   const artsList = useSelector((state) => state.artsReducer);
   const arts = artsList;
-
+  console.log(arts);
+  if (arts[0] === undefined) {
+    return (
+      <div className="container p-4">
+        <div className="row">
+          <div className="col-sm-4" />
+          <div className="col-sm-8">
+            <h1>
+              Loading
+            </h1>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div>
       <div>
