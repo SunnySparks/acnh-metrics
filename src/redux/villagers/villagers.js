@@ -36,7 +36,6 @@ const reducer = (state = initialState, action) => {
       return action.payload.data.sort((a, b) => 0.5 - Math.random());
       /* eslint-enable no-unused-vars */
     case GET_A_VILLAGER:
-      console.log(action.payload.data);
       return action.payload.data;
     default:
       return state;

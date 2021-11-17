@@ -34,7 +34,7 @@ const Villager = () => {
               <h2 className="links-nav">go back</h2>
             </Link>
           </button>
-          { villagers.length !== 0
+          { villagers.length > 0
             ? villagers.map((villager) => (
               <VillagerList
                 key={villager.id}

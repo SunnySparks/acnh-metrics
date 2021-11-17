@@ -1,22 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../App.css';
-import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import { getOneVillager } from '../redux/villagers/villagers';
 
 const VillagerList = (props) => {
-  const dispatch = useDispatch();
-
   const {
     name, id, bday, icon, species, value,
   } = props;
-
-  dispatch(getOneVillager(id));
-  const villager = useSelector((state) => state.villagersReducer);
-  console.log(villager);
 
   if (value === 'value') {
     return (
