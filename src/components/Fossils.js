@@ -42,9 +42,9 @@ const Fossil = () => {
                 /* eslint-disable dot-notation */
                 name={fossil.name['name-USen']}
                 id={fossil['file-name']}
-                phrase={fossil['museum-phrase']}
+                price={fossil.price}
                 image={fossil['image_uri']}
-                value={fossil['part-of']}
+                idNum={fossils.indexOf(fossil)}
                 /* eslint-enable dot-notation */
               />
             ))

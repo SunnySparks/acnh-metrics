@@ -54,7 +54,7 @@ const VillagerDetails = () => {
       </h4>
       <h4>
         Birthday:
-        {villager['birthday-string']}
+        {villager.birthday}
       </h4>
       <h4>
         Species:

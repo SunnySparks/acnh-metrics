@@ -17,7 +17,7 @@ const Villager = () => {
   const villagersList = useSelector((state) => state.villagersReducer);
   const villagers = villagersList;
   villagers.length = 24;
-  console.log(villagers[0]);
+  console.log(villagers);
   if (villagers[0] === undefined) {
     return (
       <div className="container p-4">
@@ -50,7 +50,7 @@ const Villager = () => {
                 key={villager.id}
                 name={villager.name['name-USen']}
                 id={villager.id}
-                bday={villager['birthday-string']}
+                bday={villager.birthday}
                 /* eslint-disable dot-notation */
                 icon={villager['icon_uri']}
                 /* eslint-enable dot-notation */

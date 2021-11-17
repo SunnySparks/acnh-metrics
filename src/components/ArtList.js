@@ -10,9 +10,9 @@ const ArtList = (props) => {
   // const dispatch = useDispatch();
 
   const {
-    name, id, desc, image, value,
+    name, id, image, buyPrice, sellPrice,
   } = props;
-  if (value === 'value') {
+  if (name === 'name') {
     return (
       <div className="container p-4">
         <div className="row">
@@ -34,18 +34,18 @@ const ArtList = (props) => {
         </Link>
       </h1>
       <img src={image} alt="user" className="rocketImage" />
-      <h4>
-        Painting Name:
-        {name}
-      </h4>
-      <h4>
-        Description:
-        {desc}
-      </h4>
-      <h4>
-        Value:
-        {value}
-      </h4>
+      <h3>
+        ID:
+        {id}
+      </h3>
+      <h2>
+        Buy Price: $
+        {buyPrice}
+      </h2>
+      <h2>
+        Sell Price: $
+        {sellPrice}
+      </h2>
     </div>
   );
 };
@@ -55,7 +55,7 @@ export default ArtList;
 ArtList.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  buyPrice: PropTypes.string.isRequired,
+  sellPrice: PropTypes.string.isRequired,
 };

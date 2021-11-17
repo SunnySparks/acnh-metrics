@@ -20,8 +20,6 @@ const Art = () => {
 
   const artsList = useSelector((state) => state.artsReducer);
   const arts = artsList;
-  arts.length = 24;
-  console.log(arts);
 
   return (
     <div>
@@ -42,9 +40,9 @@ const Art = () => {
                 /* eslint-disable dot-notation */
                 name={art.name['name-USen']}
                 id={art.id}
-                desc={art['museum-desc']}
                 image={art['image_uri']}
-                value={art['file-name']}
+                buyPrice={art['buy-price']}
+                sellPrice={art['sell-price']}
                 /* eslint-enable dot-notation */
               />
             ))

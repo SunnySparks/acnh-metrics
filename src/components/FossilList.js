@@ -10,9 +10,9 @@ const FossilList = (props) => {
   // const dispatch = useDispatch();
 
   const {
-    name, id, phrase, image, value,
+    name, id, price, image, idNum,
   } = props;
-  if (value === 'value') {
+  if (name === 'name') {
     return (
       <div className="container p-4">
         <div className="row">
@@ -39,12 +39,12 @@ const FossilList = (props) => {
         {id}
       </h4>
       <h4>
-        About:
-        {phrase}
+        ID:
+        {idNum}
       </h4>
       <h4>
-        Value:
-        {value}
+        Price: $
+        {price}
       </h4>
     </div>
   );
@@ -55,7 +55,7 @@ export default FossilList;
 FossilList.propTypes = {
   name: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  phrase: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
+  idNum: PropTypes.string.isRequired,
 };
