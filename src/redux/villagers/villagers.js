@@ -36,7 +36,8 @@ const reducer = (state = initialState, action) => {
       return action.payload.data.sort((a, b) => 0.5 - Math.random());
       /* eslint-enable no-unused-vars */
     case GET_A_VILLAGER:
-      return action.payload.data;
+      /* eslint-disable dot-notation */
+      return [action.payload.data.name['name-USen'], action.payload.data['image_uri'], action.payload.data['birthday-string'], action.payload.data.species];
     default:
       return state;
   }

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getOneVillager } from '../redux/villagers/villagers';
 
 const VillagerDetails = () => {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   const dispatch = useDispatch();
 
@@ -14,14 +14,23 @@ const VillagerDetails = () => {
   }, []);
 
   const villager = useSelector((state) => state.villagersReducer);
-  console.log(villager);
+  console.log(villager[0]);
   return (
     <div>
+      <button type="button">
+        <Link
+          className="nav-link"
+          to="/"
+        >
+          <h2 className="links-nav">go back</h2>
+        </Link>
+      </button>
       <h1>
-        {villager.name['name-USen']}
+        Name:
+        {villager[0]}
       </h1>
       { /* eslint-disable dot-notation */
-        <img src={villager['image_uri']} alt="user" className="rocketImage" />
+        <img src={villager[1]} alt="villager" className="villagerPic" />
       /* eslint-enable dot-notation */ }
       <h4>
         villager ID:
@@ -29,11 +38,11 @@ const VillagerDetails = () => {
       </h4>
       <h4>
         Birthday:
-        {villager['birthday-string']}
+        {villager[2]}
       </h4>
       <h4>
         Species:
-        {villager.species}
+        {villager[3]}
       </h4>
     </div>
   );
