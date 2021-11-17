@@ -9,7 +9,7 @@ const VillagerList = (props) => {
     name, id, bday, icon, species, value,
   } = props;
 
-  if (value === 'value') {
+  if (name === undefined) {
     return (
       <div className="container p-4">
         <div className="row">

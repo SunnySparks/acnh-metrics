@@ -37,7 +37,7 @@ const reducer = (state = initialState, action) => {
       /* eslint-enable no-unused-vars */
     case GET_A_VILLAGER:
       /* eslint-disable dot-notation */
-      return [action.payload.data.name['name-USen'], action.payload.data['image_uri'], action.payload.data['birthday-string'], action.payload.data.species];
+      return action.payload.data;
     default:
       return state;
   }
