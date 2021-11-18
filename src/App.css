@@ -30,10 +30,23 @@
   text-decoration: none;
 }
 
+.leafcont{
+  background-image: url('./leaf.png');
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.head-banner{
+  color: white;
+  height: 200px;
+}
+
 .category{
   color: white;
   background-image: url('./leaf.png');
-  height: 100px;
+  height: 150px;
   width: 100px;
   background-repeat: no-repeat;
   background-size: contain;
