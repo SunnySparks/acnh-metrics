@@ -34,7 +34,7 @@
   background-image: url('./leaf.png');
   height: auto;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 80%;
   background-position: center;
 }
 
@@ -46,11 +46,12 @@
 .category{
   color: white;
   background-image: url('./leaf.png');
-  height: 150px;
-  width: 100px;
+  height: 180px;
+  width: auto;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 70%;
   background-position: center;
+  
 }
 @media only screen and (max-width: 600px)  {
 

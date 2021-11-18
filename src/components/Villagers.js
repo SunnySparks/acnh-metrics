@@ -35,14 +35,14 @@ const Villager = () => {
     <div>
       <div>
         <div>
-          <button type="button">
+          <div>
             <Link
               className="nav-link"
               to="/"
             >
-              <h2 className="links-nav">go back</h2>
+              <h4 className="links-nav">go back</h4>
             </Link>
-          </button>
+          </div>
           { villagers !== 0
             ? villagers.map((villager) => (
               <VillagerList
