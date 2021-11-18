@@ -4,20 +4,22 @@ import '../App.css';
 import { NavLink } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getArrayData } from '../redux/villagers/villagers';
+import { getVillagerLength } from '../redux/villagers/villagers';
+import { getFossilLength } from '../redux/fossils/fossils';
+import { getArtLength } from '../redux/art/art';
 
 const Home = () => {
-  const villagerArr = [];
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (villagerArr.length === 0) {
-      dispatch(getArrayData());
-    }
+    dispatch(getVillagerLength());
+    dispatch(getFossilLength());
+    dispatch(getArtLength());
   }, []);
 
   const villagers = useSelector((state) => state.villagersReducer);
-  console.log(villagers);
+  const fossils = useSelector((state) => state.fossilsReducer);
+  const artsies = useSelector((state) => state.artsReducer);
   if (villagers.length < 1) {
     return (
       <div className="container p-4">
@@ -63,7 +65,10 @@ const Home = () => {
                   className="nav-link"
                   to="/fossils"
                 >
-                  <h2 className="links-nav">Fossils</h2>
+                  <h2 className="links-nav">
+                    Fossils:
+                  </h2>
+                  {fossils}
                 </NavLink>
               </div>
               <div className="mb-1">|</div>
@@ -72,7 +77,10 @@ const Home = () => {
                   className="nav-link"
                   to="/art"
                 >
-                  <h2 className="links-nav">Art</h2>
+                  <h2 className="links-nav">
+                    Works of Art:
+                  </h2>
+                  {artsies}
                 </NavLink>
               </div>
             </div>

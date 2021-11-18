@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const GET_FOSSILS = 'GET_FOSSILS';
 const GET_A_FOSSIL = 'GET_A_FOSSIL';
+const GET_ARRAY_INFO = 'GET_ARRAY_INFO';
 const API_URL = 'https://acnhapi.com/v1a/fossils/';
 
 const initialState = [];
@@ -12,6 +13,18 @@ export const getFossils = () => async (dispatch) => {
     .then((response) => {
       dispatch({
         type: GET_FOSSILS,
+        payload: response,
+      });
+    });
+};
+
+export const getFossilLength = () => async (dispatch) => {
+  await axios.get(API_URL, {
+    method: 'GET',
+  })
+    .then((response) => {
+      dispatch({
+        type: GET_ARRAY_INFO,
         payload: response,
       });
     });
@@ -38,6 +51,8 @@ const reducer = (state = initialState, action) => {
     case GET_A_FOSSIL:
       console.log(action.payload.data);
       return action.payload.data;
+    case GET_ARRAY_INFO:
+      return action.payload.data.length;
     default:
       return state;
   }
