@@ -1,12 +1,12 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import ReactShallowRenderer from 'react-test-renderer/shallow';
-import Home from '../components/Home';
+import App from '../../App';
 
 describe('Home component', () => {
   test('should render Home component correctly', () => {
     const renderer = new ReactShallowRenderer();
-    renderer.render(<Home />);
+    renderer.render(<App />);
     expect(renderer.getRenderOutput()).toMatchSnapshot();
   });
 });

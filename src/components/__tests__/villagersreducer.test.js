@@ -1,4 +1,4 @@
-import villagersReducer from '../redux/villagers/villagers';
+import villagersReducer from '../../redux/villagers/villagers';
 
 const prevState = [];
 

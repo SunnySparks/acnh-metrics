@@ -1,4 +1,4 @@
-import artsReducer from '../redux/art/art';
+import artsReducer from '../../redux/art/art';
 
 const prevState = [];
 

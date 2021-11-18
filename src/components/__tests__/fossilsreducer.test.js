@@ -1,4 +1,4 @@
-import fossilsReducer from '../redux/fossils/fossils';
+import fossilsReducer from '../../redux/fossils/fossils';
 
 const prevState = [];
 
