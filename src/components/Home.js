@@ -35,12 +35,12 @@ const Home = () => {
     );
   }
   return (
-    <div>
+    <div className="container">
       <div className="row">
-        <div className="col-xs-12">Title</div>
+        <div className="col-xs-12 text-white">Title</div>
       </div>
       <div className="row">
-        <div className="col category">
+        <div className="col category leafbg">
           <NavLink
             className="nav-link"
             to="/villagers"
@@ -48,9 +48,9 @@ const Home = () => {
             <h2 className="links-nav">
               Villagers:
             </h2>
-            {villagers}
-            elements. Visible: 25.
           </NavLink>
+          {villagers}
+          elements. Visible: 25.
         </div>
         <div className="col category">
           <NavLink
@@ -60,9 +60,9 @@ const Home = () => {
             <h2 className="links-nav">
               Fossils:
             </h2>
-            {fossils}
-            elements.
           </NavLink>
+          {fossils}
+          elements.
         </div>
       </div>
       <div className="row">
@@ -74,9 +74,9 @@ const Home = () => {
             <h2 className="links-nav">
               Works of Art:
             </h2>
-            {artsies}
-            elements.
           </NavLink>
+          {artsies}
+          elements.
         </div>
         <div className="col category">Placeholder</div>
       </div>

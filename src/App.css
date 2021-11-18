@@ -1,16 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap');
+
+.lato{
+  font-family: 'Lato', sans-serif;
+}
+
+.robo{
+  font-family: 'Roboto', sans-serif;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root{
+  background-color: #4368B2;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.links-nav{
+  color: white;
+  text-decoration: none;
+}
+
+.category{
+  color: white;
+  background-image: url('./leaf.png');
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  filter: grayscale(100%);
+}
+@media only screen and (max-width: 600px)  {
+
 }
 
 .App-header {
