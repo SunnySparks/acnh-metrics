@@ -20,7 +20,6 @@ const Home = () => {
   const villagers = useSelector((state) => state.villagersReducer);
   const fossils = useSelector((state) => state.fossilsReducer);
   const artsies = useSelector((state) => state.artsReducer);
-  const total = (villagers + fossils + artsies);
   if (villagers.length < 1 && fossils.length < 1 && artsies.length < 1) {
     return (
       <div className="container p-4">
@@ -41,7 +40,6 @@ const Home = () => {
         <div className="col p-5 leafcont" />
         <div className="col p-5">
           <h1>ACNH statistics</h1>
-          {total}
           Elements
         </div>
       </div>

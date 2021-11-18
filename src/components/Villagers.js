@@ -1,9 +1,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../App.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { React, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import VillagerList from './VillagerList';
 import { getVillagers } from '../redux/villagers/villagers';
 
@@ -13,10 +15,10 @@ const Villager = () => {
   useEffect(() => {
     dispatch(getVillagers());
   }, []);
-
   const villagersList = useSelector((state) => state.villagersReducer);
-  const villagers = villagersList;
+  let villagers = [];
   villagers.length = 24;
+  villagers = villagersList;
   if (villagers[0] === undefined) {
     return (
       <div className="container p-4">
@@ -40,7 +42,17 @@ const Villager = () => {
               className="nav-link"
               to="/"
             >
-              <h4 className="links-nav">go back</h4>
+              <h4 className="links-nav">
+                <FontAwesomeIcon icon={faArrowLeft} />
+                <FontAwesomeIcon icon="long-arrow-alt-left" />
+                <FontAwesomeIcon icon="arrow-circle-left" />
+                <FontAwesomeIcon icon="arrow-alt-circle-left" />
+                <FontAwesomeIcon icon="angle-left" />
+                <FontAwesomeIcon icon="chevron-circle-left" />
+                <FontAwesomeIcon icon="hand-point-left" />
+                <FontAwesomeIcon icon="check-square" />
+                <FontAwesomeIcon icon="coffee" />
+              </h4>
             </Link>
           </div>
           { villagers !== 0
