@@ -2,93 +2,59 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../App.css';
 import { NavLink } from 'react-router-dom';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getVillagerLength } from '../redux/villagers/villagers';
-import { getFossilLength } from '../redux/fossils/fossils';
-import { getArtLength } from '../redux/art/art';
 
-const Home = () => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getVillagerLength());
-    dispatch(getFossilLength());
-    dispatch(getArtLength());
-  }, []);
-
-  const villagers = useSelector((state) => state.villagersReducer);
-  const fossils = useSelector((state) => state.fossilsReducer);
-  const artsies = useSelector((state) => state.artsReducer);
-  if (villagers.length < 1 && fossils.length < 1 && artsies.length < 1) {
-    return (
-      <div className="container p-4">
-        <div className="row">
-          <div className="col-sm-4" />
-          <div className="col-sm-8">
-            <h1>
-              Loading
-            </h1>
-          </div>
-        </div>
-      </div>
-    );
-  }
-  return (
-    <div className="container">
-      <div className="row head-banner p-3">
-        <div className="col p-5 leafcont" />
-        <div className="col p-5">
-          <h1>ACNH statistics</h1>
-          Elements
-        </div>
-      </div>
-      <div className="row text-white lato bg-2">
-        <p>Categories</p>
-      </div>
-      <div className="row">
-        <div className="col category p-4 bg-1">
-          <NavLink
-            className="nav-link"
-            to="/villagers"
-          >
-            <h3 className="links-nav">
-              Villagers:
-            </h3>
-          </NavLink>
-          {villagers}
-          elements. Visible: 25.
-        </div>
-        <div className="col category p-4 bg-2">
-          <NavLink
-            className="nav-link"
-            to="/fossils"
-          >
-            <h3 className="links-nav">
-              Fossils:
-            </h3>
-          </NavLink>
-          {fossils}
-          elements.
-        </div>
-      </div>
-      <div className="row">
-        <div className="col category p-4 bg-2">
-          <NavLink
-            className="nav-link"
-            to="/art"
-          >
-            <h3 className="links-nav">
-              Works of Art:
-            </h3>
-          </NavLink>
-          {artsies}
-          elements.
-        </div>
-        <div className="col category p-4 bg-1">Placeholder</div>
+const Home = () => (
+  <div className="container">
+    <div className="row head-banner p-3">
+      <div className="col p-5 leafcont" />
+      <div className="col p-5">
+        <h1>ACNH statistics</h1>
+        Elements
       </div>
     </div>
-  );
+    <div className="row text-white lato bg-2">
+      <p>Categories</p>
+    </div>
+    <div className="row">
+      <div className="col category p-4 bg-1">
+        <NavLink
+          className="nav-link"
+          to="/villagers"
+        >
+          <h3 className="links-nav">
+            Villagers:
+          </h3>
+        </NavLink>
+        391 elements. Visible: 25.
+      </div>
+      <div className="col category p-4 bg-2">
+        <NavLink
+          className="nav-link"
+          to="/fossils"
+        >
+          <h3 className="links-nav">
+            Fossils:
+          </h3>
+        </NavLink>
+        73 elements.
+      </div>
+    </div>
+    <div className="row">
+      <div className="col category p-4 bg-2">
+        <NavLink
+          className="nav-link"
+          to="/art"
+        >
+          <h3 className="links-nav">
+            Works of Art:
+          </h3>
+        </NavLink>
+        43 elements.
+      </div>
+      <div className="col category p-4 bg-1">Placeholder</div>
+    </div>
+  </div>
+);
   /*
   return (
     <nav className="navBar navbar-expand-lg p-4 border border-bottom bg-white">
@@ -148,6 +114,5 @@ const Home = () => {
     </nav>
   );
   */
-};
 
 export default Home;

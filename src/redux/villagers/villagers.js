@@ -2,7 +2,6 @@ import axios from 'axios';
 
 const GET_VILLAGERS = 'GET_VILLAGERS';
 const GET_A_VILLAGER = 'GET_A_VILLAGER';
-const GET_VILLAGER_LENGTH = 'GET_VILLAGER_LENGTH';
 const API_URL = 'https://acnhapi.com/v1a/villagers/';
 
 const initialState = [];
@@ -13,18 +12,6 @@ export const getVillagers = () => async (dispatch) => {
     .then((response) => {
       dispatch({
         type: GET_VILLAGERS,
-        payload: response,
-      });
-    });
-};
-
-export const getVillagerLength = () => async (dispatch) => {
-  await axios.get(API_URL, {
-    method: 'GET',
-  })
-    .then((response) => {
-      dispatch({
-        type: GET_VILLAGER_LENGTH,
         payload: response,
       });
     });
@@ -51,8 +38,6 @@ const reducer = (state = initialState, action) => {
     case GET_A_VILLAGER:
       /* eslint-disable dot-notation */
       return action.payload.data;
-    case GET_VILLAGER_LENGTH:
-      return action.payload.data.length;
     default:
       return state;
   }

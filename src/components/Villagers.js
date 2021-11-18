@@ -42,17 +42,9 @@ const Villager = () => {
               className="nav-link"
               to="/"
             >
-              <h4 className="links-nav">
+              <h2 className="links-nav">
                 <FontAwesomeIcon icon={faArrowLeft} />
-                <FontAwesomeIcon icon="long-arrow-alt-left" />
-                <FontAwesomeIcon icon="arrow-circle-left" />
-                <FontAwesomeIcon icon="arrow-alt-circle-left" />
-                <FontAwesomeIcon icon="angle-left" />
-                <FontAwesomeIcon icon="chevron-circle-left" />
-                <FontAwesomeIcon icon="hand-point-left" />
-                <FontAwesomeIcon icon="check-square" />
-                <FontAwesomeIcon icon="coffee" />
-              </h4>
+              </h2>
             </Link>
           </div>
           { villagers !== 0
