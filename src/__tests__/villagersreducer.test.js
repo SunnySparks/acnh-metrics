@@ -37,6 +37,18 @@ const getVillagers = () => {
     return prevState.push(data);
 };
 
+const initialState = [];
+const getOneVillager = (id) => {
+  const data =
+    {
+      "birthday": "20/2",
+      "id": 301,
+      "name": "Sprinke",
+      "species": "Penguin",
+    };
+    return initialState.push(data);
+};
+
 describe('Mock villager data pull', () => {
   test('It returns an empty array before fetching data', () => {
     expect(villagersReducer(undefined, {})).toEqual([]);
@@ -73,6 +85,16 @@ describe('Mock villager data pull', () => {
           "name": "Sprinke",
           "species": "Penguin",
         }]],
+    )
+  });
+  test('It will fetch the data of one villager', () => {
+    expect(villagersReducer(initialState, getOneVillager(301))).toEqual(
+      [{
+        "birthday": "20/2",
+        "id": 301,
+        "name": "Sprinke",
+        "species": "Penguin",
+      }],
     )
   })
 })
