@@ -56,7 +56,7 @@ const Home = () => {
                     Villagers:
                   </h2>
                   {villagers}
-                  Visible: 25
+                  elements. Visible: 25.
                 </NavLink>
               </div>
               <div className="mb-1">|</div>
@@ -69,6 +69,7 @@ const Home = () => {
                     Fossils:
                   </h2>
                   {fossils}
+                  elements.
                 </NavLink>
               </div>
               <div className="mb-1">|</div>
@@ -81,6 +82,7 @@ const Home = () => {
                     Works of Art:
                   </h2>
                   {artsies}
+                  elements.
                 </NavLink>
               </div>
             </div>

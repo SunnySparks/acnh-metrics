@@ -20,7 +20,6 @@ const Fossil = () => {
 
   const fossilsList = useSelector((state) => state.fossilsReducer);
   const fossils = fossilsList;
-  fossils.length = 24;
   console.log(fossilsList);
 
   if (fossils[0] === undefined) {
