@@ -2,51 +2,85 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../App.css';
 import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getArrayData } from '../redux/villagers/villagers';
 
-const Home = () => (
-  <nav className="navBar navbar-expand-lg p-4 border border-bottom bg-white">
-    <div className="container-fluid">
-      <div>
+const Home = () => {
+  const villagerArr = [];
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (villagerArr.length === 0) {
+      dispatch(getArrayData());
+    }
+  }, []);
+
+  const villagers = useSelector((state) => state.villagersReducer);
+  console.log(villagers);
+  if (villagers.length < 1) {
+    return (
+      <div className="container p-4">
+        <div className="row">
+          <div className="col-sm-4" />
+          <div className="col-sm-8">
+            <h1>
+              Loading
+            </h1>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <nav className="navBar navbar-expand-lg p-4 border border-bottom bg-white">
+      <div className="container-fluid">
         <div>
-          <div className="d-flex align-items-center">
-            <div className="ms-5 logo-nav">
-              <span className="me-4">
-                image
-              </span>
-              <span className="title-nav">title nav</span>
-            </div>
-            <div className="mb-1">|</div>
-            <div>
-              <NavLink
-                className="nav-link"
-                to="/villagers"
-              >
-                <h2 className="links-nav">Villagers</h2>
-              </NavLink>
-            </div>
-            <div className="mb-1">|</div>
-            <div>
-              <NavLink
-                className="nav-link"
-                to="/fossils"
-              >
-                <h2 className="links-nav">Fossils</h2>
-              </NavLink>
-            </div>
-            <div className="mb-1">|</div>
-            <div>
-              <NavLink
-                className="nav-link"
-                to="/art"
-              >
-                <h2 className="links-nav">Art</h2>
-              </NavLink>
+          <div>
+            <div className="d-flex align-items-center">
+              <div className="ms-5 logo-nav">
+                <span className="me-4">
+                  image
+                </span>
+                <span className="title-nav">title nav</span>
+              </div>
+              <div className="mb-1">|</div>
+              <div>
+                <NavLink
+                  className="nav-link"
+                  to="/villagers"
+                >
+                  <h2 className="links-nav">
+                    Villagers:
+                  </h2>
+                  {villagers}
+                  Visible: 25
+                </NavLink>
+              </div>
+              <div className="mb-1">|</div>
+              <div>
+                <NavLink
+                  className="nav-link"
+                  to="/fossils"
+                >
+                  <h2 className="links-nav">Fossils</h2>
+                </NavLink>
+              </div>
+              <div className="mb-1">|</div>
+              <div>
+                <NavLink
+                  className="nav-link"
+                  to="/art"
+                >
+                  <h2 className="links-nav">Art</h2>
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
-);
+    </nav>
+  );
+};
 
 export default Home;
