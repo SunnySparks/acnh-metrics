@@ -17,7 +17,7 @@ describe('Fossil component', () => {
     expect(component.container).toHaveTextContent('diplo skull');
     expect(component.container).toHaveTextContent('5000');
   });
-  test('If name is undefined,it should throw a "loading" message' , () => {
+  test('If name is undefined,it should throw a "loading" message', () => {
     const component = render(
       <FossilList
         name="undefined"

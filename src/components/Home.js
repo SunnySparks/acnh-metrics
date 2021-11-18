@@ -20,7 +20,7 @@ const Home = () => {
   const villagers = useSelector((state) => state.villagersReducer);
   const fossils = useSelector((state) => state.fossilsReducer);
   const artsies = useSelector((state) => state.artsReducer);
-  if (villagers.length < 1) {
+  if (villagers.length < 1 && fossils.length < 1 && artsies.length < 1) {
     return (
       <div className="container p-4">
         <div className="row">
@@ -34,6 +34,55 @@ const Home = () => {
       </div>
     );
   }
+  return (
+    <div>
+      <div className="row">
+        <div className="col-xs-12">Title</div>
+      </div>
+      <div className="row">
+        <div className="col category">
+          <NavLink
+            className="nav-link"
+            to="/villagers"
+          >
+            <h2 className="links-nav">
+              Villagers:
+            </h2>
+            {villagers}
+            elements. Visible: 25.
+          </NavLink>
+        </div>
+        <div className="col category">
+          <NavLink
+            className="nav-link"
+            to="/fossils"
+          >
+            <h2 className="links-nav">
+              Fossils:
+            </h2>
+            {fossils}
+            elements.
+          </NavLink>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col category">
+          <NavLink
+            className="nav-link"
+            to="/art"
+          >
+            <h2 className="links-nav">
+              Works of Art:
+            </h2>
+            {artsies}
+            elements.
+          </NavLink>
+        </div>
+        <div className="col category">Placeholder</div>
+      </div>
+    </div>
+  );
+  /*
   return (
     <nav className="navBar navbar-expand-lg p-4 border border-bottom bg-white">
       <div className="container-fluid">
@@ -91,6 +140,7 @@ const Home = () => {
       </div>
     </nav>
   );
+  */
 };
 
 export default Home;

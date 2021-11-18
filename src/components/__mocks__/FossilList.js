@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const FossilList = (props) => {
-
   const {
     name, id, price, image, idNum,
   } = props;
-  if (name === "undefined") {
+  if (name === 'undefined') {
     return (
       <div className="container p-4">
         <div className="row">

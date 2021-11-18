@@ -1,7 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
-import VillagerList from '../VillagerList'
+import VillagerList from '../VillagerList';
 
 jest.mock('../VillagerList');
 
@@ -21,7 +21,7 @@ describe('Villager component', () => {
     expect(component.container).toHaveTextContent('Vladimir');
     expect(component.container).toHaveTextContent('Cub');
   });
-  test('If name is undefined,it should throw an "Undefined Villager" error' , () => {
+  test('If name is undefined,it should throw an "Undefined Villager" error', () => {
     const component = render(
       <VillagerList
         key="key"
