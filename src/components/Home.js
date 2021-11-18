@@ -40,45 +40,45 @@ const Home = () => {
         <div className="col-xs-12 text-white">Title</div>
       </div>
       <div className="row">
-        <div className="col category leafbg">
+        <div className="col category p-4 bg-1">
           <NavLink
             className="nav-link"
             to="/villagers"
           >
-            <h2 className="links-nav">
+            <h3 className="links-nav">
               Villagers:
-            </h2>
+            </h3>
           </NavLink>
           {villagers}
           elements. Visible: 25.
         </div>
-        <div className="col category">
+        <div className="col category p-4 bg-2">
           <NavLink
             className="nav-link"
             to="/fossils"
           >
-            <h2 className="links-nav">
+            <h3 className="links-nav">
               Fossils:
-            </h2>
+            </h3>
           </NavLink>
           {fossils}
           elements.
         </div>
       </div>
       <div className="row">
-        <div className="col category">
+        <div className="col category p-4 bg-2">
           <NavLink
             className="nav-link"
             to="/art"
           >
-            <h2 className="links-nav">
+            <h3 className="links-nav">
               Works of Art:
-            </h2>
+            </h3>
           </NavLink>
           {artsies}
           elements.
         </div>
-        <div className="col category">Placeholder</div>
+        <div className="col category p-4 bg-1">Placeholder</div>
       </div>
     </div>
   );

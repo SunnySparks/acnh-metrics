@@ -17,6 +17,14 @@
   height: 100vh;
 }
 
+.bg-1{
+  background-color: #4368B0;
+}
+
+.bg-2{
+  background-color: #3F60A3;
+}
+
 .links-nav{
   color: white;
   text-decoration: none;
@@ -30,7 +38,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  filter: grayscale(100%);
 }
 @media only screen and (max-width: 600px)  {
 
