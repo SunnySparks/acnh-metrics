@@ -5,7 +5,7 @@ const ArtList = (props) => {
   const {
     name, id, image, buyPrice, sellPrice,
   } = props;
-  if (name === undefined) {
+  if (name === "undefined") {
     return (
       <div className="container p-4">
         <div className="row">
