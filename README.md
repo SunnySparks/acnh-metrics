@@ -7,7 +7,7 @@
 - [Live Demo](https://metrics-acnh.herokuapp.com/)
 - [Video Presentation](https://www.loom.com/share/5ce3a0dd1f604435b36f2c04db7ec4b5)
 
-![screenshot](./screenshot.png)
+![screenshot](./img.png)
 
 Use this app for consulting the villagers' info, as well as the prices for artworks and fossils
 
