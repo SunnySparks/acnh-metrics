@@ -38,7 +38,7 @@ const getVillagers = () => {
 };
 
 const initialState = [];
-const getOneVillager = (id) => {
+const getOneVillager = () => {
   const data = {
     birthday: '20/2',
     id: 301,

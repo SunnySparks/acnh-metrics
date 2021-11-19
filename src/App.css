@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap');
 
 body {
-  background-color: #4368B2 !important;
+  background-color: #4368b2 !important;
 }
-.lato{
+
+.lato {
   font-family: 'Lato', sans-serif;
 }
 
-.robo{
+.robo {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -15,33 +16,33 @@ body {
   text-align: center;
 }
 
-#root{
-  background-color: #4368B2;
+#root {
+  background-color: #4368b2;
 }
 
-.bg-1{
-  background-color: #3F60A3;
+.bg-1 {
+  background-color: #3f60a3;
 }
 
-.bg-2{
+.bg-2 {
   background-color: #7399e6;
 }
 
-.bg-3{
-  background-color: #3E63A4;
+.bg-3 {
+  background-color: #3e63a4;
 }
 
-.bluborder{
+.bluborder {
   border: 10px solid;
-  border-color: #5485E2;
+  border-color: #5485e2;
 }
 
-.links-nav{
+.links-nav {
   color: white;
   text-decoration: none;
 }
 
-.leafcont{
+.leafcont {
   background-image: url('./leaf.png');
   height: auto;
   background-repeat: no-repeat;
@@ -49,24 +50,24 @@ body {
   background-position: center;
 }
 
-.head-banner{
+.head-banner {
   color: white;
   height: 200px;
 }
 
-.headbanner{
-  background-color: #4369B2;
+.headbanner {
+  background-color: #4369b2;
 }
 
-.firstCont{
-  background-color: #5485E2;
+.firstCont {
+  background-color: #5485e2;
 }
 
-.separatorBG{
-  background-color: #35548B;
+.separatorBG {
+  background-color: #35548b;
 }
 
-.category{
+.category {
   color: white;
   background-image: url('./leaf.png');
   height: 180px;
@@ -74,16 +75,16 @@ body {
   background-repeat: no-repeat;
   background-size: 70%;
   background-position: center;
-  
 }
-@media only screen and (max-width: 600px)  {
- .villagerCont{
-  width: 50% !important;
- }
 
- .villagerPic{
-  width: 100% !important;
- }
+@media only screen and (max-width: 600px) {
+  .villagerCont {
+    width: 50% !important;
+  }
+
+  .villagerPic {
+    width: 100% !important;
+  }
 }
 
 .App-header {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const FossilList = (props) => {
   const {
-    name, id, price, image, idNum,
+    name, price, image, idNum,
   } = props;
   if (name === 'undefined') {
     return (
@@ -41,6 +41,7 @@ export default FossilList;
 
 FossilList.propTypes = {
   name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  idNum: PropTypes.string.isRequired,
 };

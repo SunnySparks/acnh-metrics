@@ -33,7 +33,7 @@ const getFossils = () => {
 };
 
 const initialState = [];
-const getOneFossil = (id) => {
+const getOneFossil = () => {
   const data = {
     name: 'ankylo tail',
     id: 3,

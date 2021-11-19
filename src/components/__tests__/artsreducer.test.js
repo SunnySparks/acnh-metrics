@@ -38,7 +38,7 @@ const getArts = () => {
 };
 
 const initialState = [];
-const getArt = (id) => {
+const getArt = () => {
   const data = {
     name: 'beautiful statue',
     id: 5,
