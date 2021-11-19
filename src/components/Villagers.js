@@ -3,7 +3,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-import { React, useEffect } from 'react';
+import { React, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import VillagerList from './VillagerList';
@@ -11,10 +11,11 @@ import { getVillagers } from '../redux/villagers/villagers';
 
 const Villager = () => {
   const dispatch = useDispatch();
-
+  const [busqueda, setbusqueda] = useState('');
   useEffect(() => {
     dispatch(getVillagers());
   }, []);
+
   const villagersList = useSelector((state) => state.villagersReducer);
   let villagers = [];
   villagers = villagersList;
@@ -56,6 +57,42 @@ const Villager = () => {
               <h1>Villagers</h1>
               {villagersList.length}
               Elements
+            </div>
+            <div className="row px-5 py-2 separatorBG">
+              {console.log(busqueda)}
+              <input
+                type="text"
+                placeholder="Monkey, Cat, Horse, etc..."
+                onChange={(event) => {
+                  setbusqueda(event.target.value);
+                }}
+              />
+              {/* eslint-disable arrow-body-style */
+              /* eslint-disable no-unused-vars */
+              /* eslint-disable consistent-return */
+              /* eslint-disable array-callback-return */
+              villagers.filter((val) => {
+                if (busqueda === '') {
+                  return '';
+                } if (val.species.toLowerCase().includes(busqueda.toLowerCase())) {
+                  return val;
+                }
+              }).map((val, key) => {
+                return (
+                  <div key={val.id} className="row">
+                    <VillagerList
+                      key={val.id}
+                      name={val.name['name-USen']}
+                      id={val.id}
+                      bday={val.birthday}
+                      icon={val.icon_uri}
+                      species={val.species}
+                      value={val.species}
+                    />
+                  </div>
+                );
+              })
+}
             </div>
           </div>
           <div className="row">

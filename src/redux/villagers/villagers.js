@@ -45,6 +45,7 @@ export const getOneVillager = (villagerID) => async (dispatch) => {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_VILLAGERS:
+      console.log(action.payload.data.sort);
       return action.payload.data.sort(() => 0.5 - Math.random());
     case GET_A_VILLAGER:
       return action.payload.data;
