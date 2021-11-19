@@ -49,7 +49,6 @@ const reducer = (state = initialState, action) => {
       return action.payload.data.sort((a, b) => 0.5 - Math.random());
       /* eslint-enable no-unused-vars */
     case GET_ART:
-      console.log(action.payload.data);
       return action.payload.data;
     case GET_ART_LENGTH:
       return action.payload.data.length;

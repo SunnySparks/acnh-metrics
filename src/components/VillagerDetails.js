@@ -18,7 +18,6 @@ const VillagerDetails = () => {
   }, []);
 
   const villager = useSelector((state) => state.villagersReducer);
-  console.log(villager);
   if (villager.name === undefined) {
     return (
       <div className="container p-4">

@@ -51,68 +51,8 @@ const Home = () => (
         </NavLink>
         43 elements.
       </div>
-      <div className="col category p-4 bg-1">Placeholder</div>
+      <div className="col category p-4 bg-1" />
     </div>
   </div>
 );
-  /*
-  return (
-    <nav className="navBar navbar-expand-lg p-4 border border-bottom bg-white">
-      <div className="container-fluid">
-        <div>
-          <div>
-            <div className="d-flex align-items-center">
-              <div className="ms-5 logo-nav">
-                <span className="me-4">
-                  image
-                </span>
-                <span className="title-nav">title nav</span>
-              </div>
-              <div className="mb-1">|</div>
-              <div>
-                <NavLink
-                  className="nav-link"
-                  to="/villagers"
-                >
-                  <h2 className="links-nav">
-                    Villagers:
-                  </h2>
-                  {villagers}
-                  elements. Visible: 25.
-                </NavLink>
-              </div>
-              <div className="mb-1">|</div>
-              <div>
-                <NavLink
-                  className="nav-link"
-                  to="/fossils"
-                >
-                  <h2 className="links-nav">
-                    Fossils:
-                  </h2>
-                  {fossils}
-                  elements.
-                </NavLink>
-              </div>
-              <div className="mb-1">|</div>
-              <div>
-                <NavLink
-                  className="nav-link"
-                  to="/art"
-                >
-                  <h2 className="links-nav">
-                    Works of Art:
-                  </h2>
-                  {artsies}
-                  elements.
-                </NavLink>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-  */
-
 export default Home;

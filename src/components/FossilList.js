@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const FossilList = (props) => {
-  // const dispatch = useDispatch();
-
   const {
     name, id, price, image, idNum,
   } = props;
@@ -46,24 +44,6 @@ const FossilList = (props) => {
       </h4>
     </div>
   );
-  /* return (
-    <div>
-      <h1>
-        <Link to={`${id}`}>
-          {name}
-        </Link>
-      </h1>
-      <img src={image} alt="user" className="rocketImage" />
-      <h4>
-        ID:
-        {idNum}
-      </h4>
-      <h4>
-        Price: $
-        {price}
-      </h4>
-    </div>
-  ); */
 };
 
 export default FossilList;

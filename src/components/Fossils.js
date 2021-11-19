@@ -22,7 +22,6 @@ const Fossil = () => {
 
   const fossilsList = useSelector((state) => state.fossilsReducer);
   const fossils = fossilsList;
-  console.log(fossilsList);
 
   if (fossils[0] === undefined) {
     return (
@@ -91,45 +90,6 @@ const Fossil = () => {
       </div>
     </div>
   );
-  /* return (
-    <div>
-      <div>
-        <div>
-          <button type="button">
-            <Link
-              className="nav-link"
-              to="/"
-            >
-              <h2 className="links-nav">go back</h2>
-            </Link>
-          </button>
-          { fossils.length !== 0
-            ? fossils.map((fossil) => (
-              <FossilList
-                key={fossil.id}
-                /* eslint-disable dot-notation
-                name={fossil.name['name-USen']}
-                id={fossil['file-name']}
-                price={fossil.price}
-                image={fossil['image_uri']}
-                idNum={fossils.indexOf(fossil)}
-                /* eslint-enable dot-notation
-              />
-            ))
-            : (
-              <FossilList
-                key="key"
-                name="name"
-                id="id"
-                phrase="bday"
-                image="icon"
-                value="value"
-              />
-            )}
-        </div>
-      </div>
-    </div>
-  ); */
 };
 
 export default Fossil;

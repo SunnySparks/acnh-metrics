@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const ArtList = (props) => {
-  // const dispatch = useDispatch();
   const {
     name, id, image, buyPrice, sellPrice,
   } = props;
@@ -49,28 +48,6 @@ const ArtList = (props) => {
       </h4>
     </div>
   );
-  /* return (
-    <div>
-      <h1>
-        <Link to={`${id}`}>
-          {name}
-        </Link>
-      </h1>
-      <img src={image} alt="user" className="rocketImage" />
-      <h3>
-        ID:
-        {id}
-      </h3>
-      <h2>
-        Buy Price: $
-        {buyPrice}
-      </h2>
-      <h2>
-        Sell Price: $
-        {sellPrice}
-      </h2>
-    </div>
-  ); */
 };
 
 export default ArtList;
