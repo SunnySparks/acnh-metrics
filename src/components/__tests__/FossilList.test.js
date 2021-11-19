@@ -12,6 +12,8 @@ describe('Fossil component', () => {
         name="diplo skull"
         id="diplo skull"
         price="5000"
+        image="image"
+        idNum="id"
       />,
     );
     expect(component.container).toHaveTextContent('diplo skull');
@@ -23,6 +25,8 @@ describe('Fossil component', () => {
         name="undefined"
         id="id"
         price="price"
+        image="image"
+        idNum="id"
       />,
     );
     expect(component.container).toHaveTextContent('Loading');
