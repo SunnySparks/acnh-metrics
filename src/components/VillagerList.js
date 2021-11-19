@@ -24,7 +24,7 @@ const VillagerList = (props) => {
     );
   }
   return (
-    <div>
+    <div className="col-xs-6 col-lg-6 villagerCont">
       <h1>
         <Link to={`${id}`}>
           {name}

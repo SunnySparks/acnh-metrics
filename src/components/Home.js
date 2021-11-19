@@ -9,7 +9,7 @@ const Home = () => (
       <div className="col p-5 leafcont" />
       <div className="col p-5">
         <h1>ACNH statistics</h1>
-        Elements
+        507 Elements
       </div>
     </div>
     <div className="row text-white lato bg-2">
