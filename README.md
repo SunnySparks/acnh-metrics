@@ -71,6 +71,7 @@ Give a ⭐️ if you like this project!
 - API consumption
 - Redux-Thunk utilization
 - Mock testing for React components
+- Template design by [Nelson Sakwa](https://www.behance.net/sakwadesignstudio)
 
 ## 📝 License
 
