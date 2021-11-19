@@ -42,7 +42,7 @@ exports[`Home component should render Home component correctly 1`] = `
           Villagers:
         </h3>
       </NavLink>
-      391 elements. Visible: 24.
+      391 elements.
     </div>
     <div
       className="col category p-4 bg-2"
