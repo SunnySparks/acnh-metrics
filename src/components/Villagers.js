@@ -58,7 +58,6 @@ const Villager = () => {
               Elements
             </div>
             <div className="row px-5 py-2 separatorBG">
-              {console.log(busqueda)}
               <input
                 type="text"
                 placeholder="Monkey, Cat, Horse, etc..."
@@ -68,7 +67,6 @@ const Villager = () => {
               />
             </div>
             {
-              /* eslint-disable consistent-return */
               villagers.filter((val) => {
                 if (busqueda === '') {
                   return '';
