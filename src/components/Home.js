@@ -40,7 +40,7 @@ const Home = () => (
       </div>
     </div>
     <div className="row">
-      <div className="col category p-4 bg-2">
+      <div className="col category halfCont p-4 bg-2">
         <NavLink
           className="nav-link"
           to="/art"
@@ -51,7 +51,6 @@ const Home = () => (
         </NavLink>
         43 elements.
       </div>
-      <div className="col category p-4 bg-1" />
     </div>
   </div>
 );

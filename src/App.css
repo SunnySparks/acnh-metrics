@@ -77,6 +77,10 @@ body {
   background-position: center;
 }
 
+.halfCont{
+  max-width: 50% !important;
+}
+
 @media only screen and (max-width: 600px) {
   .villagerCont {
     width: 50% !important;
