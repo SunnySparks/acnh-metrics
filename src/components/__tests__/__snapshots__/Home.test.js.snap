@@ -1,85 +1,86 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home component should render Home component correctly 1`] = `
-<nav
-  className="navBar navbar-expand-lg p-4 border border-bottom bg-white"
+<div
+  className="container"
 >
   <div
-    className="container-fluid"
+    className="row head-banner headbanner pb-3"
   >
-    <div>
-      <div>
-        <div
-          className="d-flex align-items-center"
-        >
-          <div
-            className="ms-5 logo-nav"
-          >
-            <span
-              className="me-4"
-            >
-              image
-            </span>
-            <span
-              className="title-nav"
-            >
-              title nav
-            </span>
-          </div>
-          <div
-            className="mb-1"
-          >
-            |
-          </div>
-          <div>
-            <NavLink
-              className="nav-link"
-              to="/villagers"
-            >
-              <h2
-                className="links-nav"
-              >
-                Villagers
-              </h2>
-            </NavLink>
-          </div>
-          <div
-            className="mb-1"
-          >
-            |
-          </div>
-          <div>
-            <NavLink
-              className="nav-link"
-              to="/fossils"
-            >
-              <h2
-                className="links-nav"
-              >
-                Fossils
-              </h2>
-            </NavLink>
-          </div>
-          <div
-            className="mb-1"
-          >
-            |
-          </div>
-          <div>
-            <NavLink
-              className="nav-link"
-              to="/art"
-            >
-              <h2
-                className="links-nav"
-              >
-                Art
-              </h2>
-            </NavLink>
-          </div>
-        </div>
-      </div>
+    <div
+      className="col p-5 leafcont"
+    />
+    <div
+      className="col p-5"
+    >
+      <h1>
+        ACNH statistics
+      </h1>
+      507 Elements
     </div>
   </div>
-</nav>
+  <div
+    className="row text-white separatorBG lato pt-2"
+  >
+    <p>
+      Categories
+    </p>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col category p-4 bg-1"
+    >
+      <NavLink
+        className="nav-link"
+        to="/villagers"
+      >
+        <h3
+          className="links-nav"
+        >
+          Villagers:
+        </h3>
+      </NavLink>
+      391 elements. Visible: 25.
+    </div>
+    <div
+      className="col category p-4 bg-2"
+    >
+      <NavLink
+        className="nav-link"
+        to="/fossils"
+      >
+        <h3
+          className="links-nav"
+        >
+          Fossils:
+        </h3>
+      </NavLink>
+      73 elements.
+    </div>
+  </div>
+  <div
+    className="row"
+  >
+    <div
+      className="col category p-4 bg-2"
+    >
+      <NavLink
+        className="nav-link"
+        to="/art"
+      >
+        <h3
+          className="links-nav"
+        >
+          Works of Art:
+        </h3>
+      </NavLink>
+      43 elements.
+    </div>
+    <div
+      className="col category p-4 bg-1"
+    />
+  </div>
+</div>
 `;
