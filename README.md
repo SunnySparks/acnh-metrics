@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Animal Crossing: New Horizons metrics
 
-## Available Scripts
+> A React-Redux Animal Crossing application. Retrieve data from villagers, artworks and fossils for your consultation
 
-In the project directory, you can run:
+[Live Demo](https://metrics-acnh.herokuapp.com/)
 
-### `yarn start`
+![screenshot](./screenshot.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Use this app for consulting the villagers' info, as well as the prices for artworks and fossils
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+## Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- JavaScript
+- React
+- Redux
+- Jest
 
-### `yarn build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To get a local copy up and running follow these simple example steps.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+ A modern web browser (Chrome, Firefox, Safari, Microsoft Edge)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Usage
+ Clone the project by typing in your terminal `git clone https://github.com/SunnySparks/acnh-metrics.git`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ Change directory `cd` into the just created from the project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+ Run `npm install`.
+ 
+ Run `npm start`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ Your computer will open the main page where you can add your name and score
+ 
+## Run tests
+ Clone the project using `git clone https://github.com/SunnySparks/acnh-metrics.git`.
 
-## Learn More
+ Run `npx eslint .` for javascript linters.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ Run `npx stylelint "**/*.{css,scss}"` for style linters.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+👤 **Sunny Díaz**
 
-### Analyzing the Bundle Size
+- GitHub: [@SunnySparks](https://github.com/SunnySparks)
+- Twitter: [@JosfranT6](https://twitter.com/JosFranT6)
+- Instagram: [@webdev.sunnydiaz](https://www.instagram.com/webdev.sunnydiaz/)
+- Portfolio: [sunnydiaz.com](https://sunnydiaz.com/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/jose-f-silva/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contributions, issues, and feature requests are welcome!
 
-### Making a Progressive Web App
+Feel free to check the [issues page](https://github.com/SunnySparks/acnh-metrics.git/issues).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Show your support
 
-### Advanced Configuration
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
 
-### Deployment
+- JavaScript and React best practices
+- API consumption
+- Redux-Thunk utilization
+- Mock testing for React components
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📝 License
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./MIT.md) licensed.
