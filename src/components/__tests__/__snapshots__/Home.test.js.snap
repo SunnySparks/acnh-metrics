@@ -64,7 +64,7 @@ exports[`Home component should render Home component correctly 1`] = `
     className="row"
   >
     <div
-      className="col category p-4 bg-2"
+      className="col category halfCont p-4 bg-2"
     >
       <NavLink
         className="nav-link"
@@ -78,9 +78,6 @@ exports[`Home component should render Home component correctly 1`] = `
       </NavLink>
       43 elements.
     </div>
-    <div
-      className="col category p-4 bg-1"
-    />
   </div>
 </div>
 `;
