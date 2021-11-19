@@ -69,13 +69,13 @@ const Villager = () => {
             </div>
             {
               /* eslint-disable consistent-return */
-              /* eslint-disable array-callback-return */
               villagers.filter((val) => {
                 if (busqueda === '') {
                   return '';
                 } if (val.species.toLowerCase().includes(busqueda.toLowerCase())) {
                   return val;
                 }
+                return false;
               }).map((val) => (
                 <VillagerList
                   key={val.id}
