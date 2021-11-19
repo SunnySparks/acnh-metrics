@@ -4,7 +4,8 @@
 
 > A React-Redux Animal Crossing application. Retrieve data from villagers, artworks and fossils for your consultation
 
-[Live Demo](https://metrics-acnh.herokuapp.com/)
+- [Live Demo](https://metrics-acnh.herokuapp.com/)
+- [Video Presentation](https://www.loom.com/share/5ce3a0dd1f604435b36f2c04db7ec4b5)
 
 ![screenshot](./screenshot.png)
 
