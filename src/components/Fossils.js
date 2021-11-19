@@ -70,7 +70,7 @@ const Fossil = () => {
                   name={fossil.name['name-USen']}
                   id={fossil['file-name']}
                   price={fossil.price}
-                  image={fossil['image_uri']}
+                  image={fossil.image_uri}
                   idNum={fossils.indexOf(fossil)}
                 />
               ))
