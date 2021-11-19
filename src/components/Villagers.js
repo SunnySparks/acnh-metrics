@@ -66,9 +66,7 @@ const Villager = () => {
                   name={villager.name['name-USen']}
                   id={villager.id}
                   bday={villager.birthday}
-                /* eslint-disable dot-notation */
-                  icon={villager['icon_uri']}
-                /* eslint-enable dot-notation */
+                  icon={villager.icon_uri}
                   species={villager.species}
                   value={villager.species}
                 />
@@ -79,9 +77,7 @@ const Villager = () => {
                   name="name"
                   id="id"
                   bday="bday"
-                /* eslint-disable dot-notation */
                   icon="icon"
-                /* eslint-enable dot-notation */
                   species="species"
                   value="value"
                 />

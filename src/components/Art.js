@@ -66,10 +66,9 @@ const Art = () => {
               ? arts.map((art) => (
                 <ArtList
                   key={art.id}
-                /* eslint-disable dot-notation */
                   name={art.name['name-USen']}
                   id={art.id}
-                  image={art['image_uri']}
+                  image={art.image_uri}
                   buyPrice={art['buy-price']}
                   sellPrice={art['sell-price']}
                 />

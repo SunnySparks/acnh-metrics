@@ -49,9 +49,7 @@ const ArtDetails = () => {
       </div>
       <div className="row firstCont">
         <div className="col-xs-6 p-4 villagerCont">
-          { /* eslint-disable dot-notation */
-            <img src={artsie['image_uri']} alt="villager" className="villagerPic" />
-      /* eslint-enable dot-notation */ }
+          <img src={artsie.image_uri} alt="villager" className="villagerPic" />
         </div>
         <div className="col-xs-6 villagerCont text-white">
           <h1 className="pt-5">

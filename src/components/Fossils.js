@@ -67,7 +67,6 @@ const Fossil = () => {
               ? fossils.map((fossil) => (
                 <FossilList
                   key={fossil.id}
-                /* eslint-disable dot-notation */
                   name={fossil.name['name-USen']}
                   id={fossil['file-name']}
                   price={fossil.price}

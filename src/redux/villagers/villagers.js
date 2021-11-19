@@ -45,11 +45,8 @@ export const getOneVillager = (villagerID) => async (dispatch) => {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_VILLAGERS:
-      /* eslint-disable no-unused-vars */
-      return action.payload.data.sort((a, b) => 0.5 - Math.random());
-      /* eslint-enable no-unused-vars */
+      return action.payload.data.sort(() => 0.5 - Math.random());
     case GET_A_VILLAGER:
-      /* eslint-disable dot-notation */
       return action.payload.data;
     case GET_VILLAGER_LENGTH:
       return action.payload.data.length;

@@ -45,9 +45,7 @@ export const getOneFossil = (fossilName) => async (dispatch) => {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_FOSSILS:
-      /* eslint-disable no-unused-vars */
-      return action.payload.data.sort((a, b) => 0.5 - Math.random());
-      /* eslint-enable no-unused-vars */
+      return action.payload.data.sort(() => 0.5 - Math.random());
     case GET_A_FOSSIL:
       return action.payload.data;
     case GET_FOSSIL_LENGTH:
