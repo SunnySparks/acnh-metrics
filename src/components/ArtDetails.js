@@ -37,7 +37,7 @@ const ArtDetails = () => {
       <div className="row headbanner pt-1">
         <Link
           className="nav-link"
-          to="/fossils"
+          to="/art"
         >
           <div className="row pl-2 text-white">
             <h2 className="links-nav col">
