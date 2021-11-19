@@ -67,8 +67,7 @@ const Villager = () => {
                 }}
               />
             </div>
-            {/* eslint-disable arrow-body-style */
-              /* eslint-disable no-unused-vars */
+            {
               /* eslint-disable consistent-return */
               /* eslint-disable array-callback-return */
               villagers.filter((val) => {
@@ -77,19 +76,17 @@ const Villager = () => {
                 } if (val.species.toLowerCase().includes(busqueda.toLowerCase())) {
                   return val;
                 }
-              }).map((val, key) => {
-                return (
-                  <VillagerList
-                    key={val.id}
-                    name={val.name['name-USen']}
-                    id={val.id}
-                    bday={val.birthday}
-                    icon={val.icon_uri}
-                    species={val.species}
-                    value={val.species}
-                  />
-                );
-              })
+              }).map((val) => (
+                <VillagerList
+                  key={val.id}
+                  name={val.name['name-USen']}
+                  id={val.id}
+                  bday={val.birthday}
+                  icon={val.icon_uri}
+                  species={val.species}
+                  value={val.species}
+                />
+              ))
 }
           </div>
           <div className="row">
