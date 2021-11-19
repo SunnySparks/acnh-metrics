@@ -81,6 +81,10 @@ body {
   max-width: 50% !important;
 }
 
+.searchResult {
+  flex-wrap: nowrap !important;
+}
+
 @media only screen and (max-width: 600px) {
   .villagerCont {
     width: 50% !important;

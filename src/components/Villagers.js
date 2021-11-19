@@ -19,7 +19,6 @@ const Villager = () => {
   const villagersList = useSelector((state) => state.villagersReducer);
   let villagers = [];
   villagers = villagersList;
-  villagers.length = 24;
   if (villagers[0] === undefined) {
     return (
       <div className="container p-4">
@@ -67,7 +66,8 @@ const Villager = () => {
                   setbusqueda(event.target.value);
                 }}
               />
-              {/* eslint-disable arrow-body-style */
+            </div>
+            {/* eslint-disable arrow-body-style */
               /* eslint-disable no-unused-vars */
               /* eslint-disable consistent-return */
               /* eslint-disable array-callback-return */
@@ -79,21 +79,18 @@ const Villager = () => {
                 }
               }).map((val, key) => {
                 return (
-                  <div key={val.id} className="row">
-                    <VillagerList
-                      key={val.id}
-                      name={val.name['name-USen']}
-                      id={val.id}
-                      bday={val.birthday}
-                      icon={val.icon_uri}
-                      species={val.species}
-                      value={val.species}
-                    />
-                  </div>
+                  <VillagerList
+                    key={val.id}
+                    name={val.name['name-USen']}
+                    id={val.id}
+                    bday={val.birthday}
+                    icon={val.icon_uri}
+                    species={val.species}
+                    value={val.species}
+                  />
                 );
               })
 }
-            </div>
           </div>
           <div className="row">
             { villagers !== 0
