@@ -3,8 +3,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../App.css';
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
-// import { useDispatch } from 'react-redux';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const ArtList = (props) => {
   // const dispatch = useDispatch();
@@ -26,6 +27,29 @@ const ArtList = (props) => {
     );
   }
   return (
+    <div className="col-xs-6 col-lg-6 villagerCont border text-center justify-content-center text-white lato bg-1">
+      <img src={image} alt="user" />
+      <Link to={`${id}`}>
+        <span className="links-nav"><FontAwesomeIcon icon={faArrowRight} /></span>
+        <h1 className="links-nav">
+          <span>{name}</span>
+        </h1>
+      </Link>
+      <h4>
+        ID:
+        {id}
+      </h4>
+      <h4>
+        Buy Price: $
+        {buyPrice}
+      </h4>
+      <h4>
+        Sell Price: $
+        {sellPrice}
+      </h4>
+    </div>
+  );
+  /* return (
     <div>
       <h1>
         <Link to={`${id}`}>
@@ -46,7 +70,7 @@ const ArtList = (props) => {
         {sellPrice}
       </h2>
     </div>
-  );
+  ); */
 };
 
 export default ArtList;
