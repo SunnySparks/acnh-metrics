@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { getOneFossil } from '../redux/fossils/fossils';
 
 const FossilDetails = () => {
@@ -33,6 +35,52 @@ const FossilDetails = () => {
     );
   }
   return (
+    <div className="text-white">
+      <div className="row headbanner pt-1">
+        <Link
+          className="nav-link"
+          to="/fossils"
+        >
+          <div className="row pl-2 text-white">
+            <h2 className="links-nav col">
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </h2>
+            <h2 className="col">Fossil Details</h2>
+          </div>
+        </Link>
+      </div>
+      <div className="row firstCont">
+        <div className="col-xs-6 p-4 villagerCont">
+          { /* eslint-disable dot-notation */
+            <img src={fossil['image_uri']} alt="villager" className="villagerPic" />
+      /* eslint-enable dot-notation */ }
+        </div>
+        <div className="col-xs-6 villagerCont text-white">
+          <h1 className="pt-5">
+            Name:
+          </h1>
+          <h1>
+            {fossil.name['name-USen']}
+          </h1>
+        </div>
+      </div>
+      <div className="row p-2 separatorBG">
+        <p className="m-0">
+          Fossil Data
+        </p>
+      </div>
+      <div className="row p-3 bg-1">
+        <h4 className="villagerCont">
+          Price: $
+        </h4>
+        <h4 className="villagerCont">
+          {fossil.price}
+        </h4>
+      </div>
+    </div>
+  );
+  /*
+  return (
     <div>
       <button type="button">
         <Link
@@ -45,15 +93,16 @@ const FossilDetails = () => {
       <h1>
         {fossil.name['name-USen']}
       </h1>
-      { /* eslint-disable dot-notation */
+      { /* eslint-disable dot-notation
         <img src={fossil['image_uri']} alt="villager" className="villagerPic" />
-      /* eslint-enable dot-notation */ }
+      /* eslint-enable dot-notation  }
       <h4>
         Price: $
         {fossil.price}
       </h4>
     </div>
   );
+  */
 };
 
 export default FossilDetails;
