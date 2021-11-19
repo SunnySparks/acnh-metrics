@@ -17,7 +17,7 @@ const VillagerList = (props) => {
         <div className="row">
           <div className="col-sm-4" />
           <div className="col-sm-8">
-            <h2>
+            <h2 className="text-white">
               Loading
             </h2>
           </div>
@@ -26,12 +26,12 @@ const VillagerList = (props) => {
     );
   }
   return (
-    <div className="col-xs-6 col-lg-6 villagerCont border text-center justify-content-center text-white lato">
-      <img src={icon} alt="user" className="rocketImage" />
+    <div className="col-xs-6 col-lg-6 villagerCont border text-center justify-content-center text-white lato bg-1">
+      <img src={icon} alt="user" />
       <Link to={`${id}`}>
         <span className="links-nav"><FontAwesomeIcon icon={faArrowRight} /></span>
         <h1 className="links-nav">
-          {name}
+          <span>{name}</span>
         </h1>
       </Link>
       <h4>

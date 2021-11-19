@@ -25,7 +25,7 @@ const Villager = () => {
         <div className="row">
           <div className="col-sm-4" />
           <div className="col-sm-8">
-            <h1>
+            <h1 className="text-white">
               Loading
             </h1>
           </div>
@@ -37,15 +37,26 @@ const Villager = () => {
     <div>
       <div>
         <div>
-          <div>
-            <Link
-              className="nav-link"
-              to="/"
-            >
-              <h2 className="links-nav">
-                <FontAwesomeIcon icon={faArrowLeft} />
-              </h2>
-            </Link>
+          <div className="row">
+            <div className="headbanner pt-1">
+              <Link
+                className="nav-link"
+                to="/"
+              >
+                <div className="row pl-2 text-white">
+                  <h2 className="links-nav col">
+                    <FontAwesomeIcon icon={faArrowLeft} />
+                  </h2>
+                  <h2 className="col">Villager List</h2>
+                </div>
+              </Link>
+            </div>
+            <div className="col p-5 firstCont bluborder leafcont" />
+            <div className="col p-5 firstCont bluborder text-white">
+              <h1>Villagers</h1>
+              {villagersList.length}
+              Elements
+            </div>
           </div>
           <div className="row">
             { villagers !== 0

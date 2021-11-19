@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { getOneVillager } from '../redux/villagers/villagers';
 
 const VillagerDetails = () => {
@@ -23,7 +25,7 @@ const VillagerDetails = () => {
         <div className="row">
           <div className="col-sm-4" />
           <div className="col-sm-8">
-            <h1>
+            <h1 className="text-white">
               Loading
             </h1>
           </div>
@@ -32,34 +34,64 @@ const VillagerDetails = () => {
     );
   }
   return (
-    <div>
-      <button type="button">
+    <div className="text-white">
+      <div className="row headbanner pt-1">
         <Link
           className="nav-link"
           to="/villagers"
         >
-          <h2 className="links-nav">go back</h2>
+          <div className="row pl-2 text-white">
+            <h2 className="links-nav col">
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </h2>
+            <h2 className="col">Villager Details</h2>
+          </div>
         </Link>
-      </button>
-      <h1>
-        Name:
-        {villager.name['name-USen']}
-      </h1>
-      { /* eslint-disable dot-notation */
-        <img src={villager['image_uri']} alt="villager" className="villagerPic" />
+      </div>
+      <div className="row firstCont">
+        <div className="col-xs-6 p-4 villagerCont">
+          { /* eslint-disable dot-notation */
+            <img src={villager['image_uri']} alt="villager" className="villagerPic" />
       /* eslint-enable dot-notation */ }
-      <h4>
-        villager ID:
-        {id}
-      </h4>
-      <h4>
-        Birthday:
-        {villager.birthday}
-      </h4>
-      <h4>
-        Species:
-        {villager.species}
-      </h4>
+        </div>
+        <div className="col-xs-6 villagerCont text-white">
+          <h1 className="pt-5">
+            Name:
+          </h1>
+          <h1>
+            {villager.name['name-USen']}
+          </h1>
+        </div>
+      </div>
+      <div className="row p-2 separatorBG">
+        <p className="m-0">
+          Villager Data
+        </p>
+      </div>
+      <div className="row p-3 bg-1">
+        <h4 className="villagerCont">
+          villager ID:
+        </h4>
+        <h4 className="villagerCont">
+          {id}
+        </h4>
+      </div>
+      <div className="row p-3 bg-2">
+        <h4 className="villagerCont">
+          Birthday:
+        </h4>
+        <h4 className="villagerCont">
+          {villager.birthday}
+        </h4>
+      </div>
+      <div className="row p-3 bg-3">
+        <h4 className="villagerCont">
+          Species:
+        </h4>
+        <h4 className="villagerCont">
+          {villager.species}
+        </h4>
+      </div>
     </div>
   );
 };

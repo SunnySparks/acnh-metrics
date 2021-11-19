@@ -20,11 +20,20 @@ body {
 }
 
 .bg-1{
-  background-color: #4368B0;
+  background-color: #3F60A3;
 }
 
 .bg-2{
-  background-color: #3F60A3;
+  background-color: #7399e6;
+}
+
+.bg-3{
+  background-color: #3E63A4;
+}
+
+.bluborder{
+  border: 10px solid;
+  border-color: #5485E2;
 }
 
 .links-nav{
@@ -45,6 +54,18 @@ body {
   height: 200px;
 }
 
+.headbanner{
+  background-color: #4369B2;
+}
+
+.firstCont{
+  background-color: #5485E2;
+}
+
+.separatorBG{
+  background-color: #35548B;
+}
+
 .category{
   color: white;
   background-image: url('./leaf.png');
@@ -58,6 +79,10 @@ body {
 @media only screen and (max-width: 600px)  {
  .villagerCont{
   width: 50% !important;
+ }
+
+ .villagerPic{
+  width: 100% !important;
  }
 }
 
