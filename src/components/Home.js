@@ -5,14 +5,14 @@ import { NavLink } from 'react-router-dom';
 
 const Home = () => (
   <div className="container">
-    <div className="row head-banner p-3">
+    <div className="row head-banner headbanner pb-3">
       <div className="col p-5 leafcont" />
       <div className="col p-5">
         <h1>ACNH statistics</h1>
         507 Elements
       </div>
     </div>
-    <div className="row text-white lato bg-2">
+    <div className="row text-white separatorBG lato pt-2">
       <p>Categories</p>
     </div>
     <div className="row">
