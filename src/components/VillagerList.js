@@ -2,11 +2,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import '../App.css';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 const VillagerList = (props) => {
   const {
-    name, id, bday, icon, species, value,
+    name, id, bday, icon, species,
   } = props;
 
   if (name === undefined) {
@@ -24,15 +26,16 @@ const VillagerList = (props) => {
     );
   }
   return (
-    <div className="col-xs-6 col-lg-6 villagerCont">
-      <h1>
-        <Link to={`${id}`}>
-          {name}
-        </Link>
-      </h1>
+    <div className="col-xs-6 col-lg-6 villagerCont border text-center justify-content-center text-white lato">
       <img src={icon} alt="user" className="rocketImage" />
+      <Link to={`${id}`}>
+        <span className="links-nav"><FontAwesomeIcon icon={faArrowRight} /></span>
+        <h1 className="links-nav">
+          {name}
+        </h1>
+      </Link>
       <h4>
-        villager ID:
+        ID:
         {id}
       </h4>
       <h4>
@@ -42,10 +45,6 @@ const VillagerList = (props) => {
       <h4>
         Species:
         {species}
-      </h4>
-      <h4>
-        Value:
-        {value}
       </h4>
     </div>
   );
@@ -59,5 +58,4 @@ VillagerList.propTypes = {
   bday: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
   species: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
 };

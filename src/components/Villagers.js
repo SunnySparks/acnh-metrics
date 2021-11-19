@@ -17,8 +17,8 @@ const Villager = () => {
   }, []);
   const villagersList = useSelector((state) => state.villagersReducer);
   let villagers = [];
-  villagers.length = 24;
   villagers = villagersList;
+  villagers.length = 24;
   if (villagers[0] === undefined) {
     return (
       <div className="container p-4">
