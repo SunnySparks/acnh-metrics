@@ -25,7 +25,7 @@ const Home = () => (
             Villagers:
           </h3>
         </NavLink>
-        391 elements. Visible: 25.
+        391 elements. Visible: 24.
       </div>
       <div className="col category p-4 bg-2">
         <NavLink
