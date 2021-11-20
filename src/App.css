@@ -42,9 +42,10 @@ body {
   text-decoration: none;
 }
 
-.link-search{
-  display: inline!important;
+.link-search {
+  display: inline !important;
 }
+
 .leafcont {
   background-image: url('./leaf.png');
   height: auto;
