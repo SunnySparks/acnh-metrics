@@ -22,9 +22,11 @@ exports[`Home component should render Home component correctly 1`] = `
   <div
     className="row text-white separatorBG lato pt-2"
   >
-    <p>
-      Categories
-    </p>
+    <input
+      onChange={[Function]}
+      placeholder="Search by category name"
+      type="text"
+    />
   </div>
   <div
     className="row"
@@ -73,7 +75,7 @@ exports[`Home component should render Home component correctly 1`] = `
         <h3
           className="links-nav"
         >
-          Works of Art:
+          Art:
         </h3>
       </NavLink>
       43 elements.
